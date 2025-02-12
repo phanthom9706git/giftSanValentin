@@ -1,0 +1,48 @@
+body {
+    background-color: #fa48693d;
+    color: #343a40;
+    font-family: 'Poppins', sans-serif;
+}
+.letter-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    background-image: linear-gradient(to right, #ffffff, #f1f1f1);
+}
+.letter-container h1, .letter-container h3 {
+    font-weight: 600;
+    color: #4a4a4a;
+}
+.letter-container p {
+    font-weight: 300;
+    color: #555;
+    line-height: 1.6;
+}
+.letter-container .countdown {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.letter-container::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('https://i.gifer.com/DDl.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

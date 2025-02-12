@@ -56,6 +56,6 @@
 // renderSongs();
 document.getElementsByName('volverBtn').forEach(elemento => {
     elemento.addEventListener('click', function() {
-    window.location.href = "/boardInicio/index.html"; // Cambia por la URL que desees
+    window.location.href = "boardInicio/index.html"; // Cambia por la URL que desees
     })
 });

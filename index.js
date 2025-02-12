@@ -5,7 +5,7 @@ document.getElementById('btnEntrar').addEventListener('click', function() {
 
     if (passwordInput.value === correctPassword) {
         // Si la contraseña es correcta, redirigir a otra página
-        window.location.href = "/boardInicio/index.html"; // Cambia por la URL deseada
+        window.location.href = "boardInicio/index.html"; // Cambia por la URL deseada
     } else {
         // Mostrar mensaje de error con Bootstrap
         passwordInput.classList.add('is-invalid');

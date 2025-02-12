@@ -1,6 +1,6 @@
 const garden = document.getElementById("garden");
 const butterflies = [];
-const butterflyImage = "/Imagenes/butterfly.webp"; // Imagen de mariposa
+const butterflyImage = "Imagenes/butterfly.webp"; // Imagen de mariposa
 let butterflyCount = 0;
 
 function createButterfly(x, y) {
@@ -86,7 +86,7 @@ function showMessage(message) {
 }
 document.getElementsByName('volverBtn').forEach(elemento => {
     elemento.addEventListener('click', function() {
-    window.location.href = "/boardInicio/index.html"; // Cambia por la URL que desees
+    window.location.href = "boardInicio/index.html"; // Cambia por la URL que desees
     })
 });
 

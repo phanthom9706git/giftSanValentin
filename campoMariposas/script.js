@@ -64,7 +64,7 @@ document.addEventListener("click", (event) => {
     butterflyCount++;
 
     if (butterflyCount >= 5 && !messageShown) {
-        showMessage("Las mariposas son símbolo de transformación y libertad. Que este intento mío de jardín siempre te recuerde lo hermoso que es cambiar y crecer.");
+        showMessage("Adoro que te encanten las mariposas, son símbolo de transformación y libertad. Que este intento mío de jardín siempre te recuerde lo hermoso que es cambiar y crecer.");
         messageShown = true; // Asegura que el mensaje solo aparece una vez
     }
 });

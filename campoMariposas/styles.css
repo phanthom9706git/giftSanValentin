@@ -73,10 +73,14 @@ body {
     text-align: center;
    }
    .textLow{
-    font-size: 1.2em;
+    font-size: 1.1em;
     width: 100%;
+    top: 85%;
    }
    .btn{    
     font-size: 16px;
+}
+#garden {
+    background-position: center; /* Centra la imagen de fondo */
 }
 }

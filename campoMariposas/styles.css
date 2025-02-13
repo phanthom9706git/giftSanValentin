@@ -65,7 +65,7 @@ body {
 @media (max-width: 760px) {
    #text{
     position: absolute;
-    top: 10%;
+    top: 15%;
     left: 50%;
     font-size: 1.5em;
     width: 70%;
@@ -75,4 +75,7 @@ body {
     font-size: 1.2em;
     width: 100%;
    }
+   .btn{    
+    font-size: 16px;
+}
 }

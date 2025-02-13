@@ -61,18 +61,8 @@ document.addEventListener("click", (event) => {
 moveButterflies();
 function showMessage(message) {
     const messageDiv = document.createElement('div');
+    messageDiv.classList='textLow'
     messageDiv.textContent = message;
-    messageDiv.style.position = 'absolute';
-    messageDiv.style.top = '90%';
-    messageDiv.style.left = '50%';
-    messageDiv.style.transform = 'translate(-50%, -50%)';
-    messageDiv.style.fontSize = '1em';
-    messageDiv.style.fontFamily = 'Poppins', 'sans-serif';
-    messageDiv.style.color = 'white';
-    messageDiv.style.textShadow = '2px 2px 4px rgba(0, 0, 0, 0.5)';
-    messageDiv.style.textAlign = 'center';
-    messageDiv.style.zIndex = '3'; // Asegura que el texto esté por encima de las mariposas
-    messageDiv.style.display = 'none'; // Oculto inicialmente
 
     const buttonDiv = document.createElement('button');
     buttonDiv.classList="btn btn-outline-light";
@@ -84,10 +74,4 @@ function showMessage(message) {
         messageDiv.style.display = 'block'; // Mostrar mensaje
     }, 1000); // Puedes ajustar el tiempo de retraso si lo deseas
 }
-document.getElementsByName('volverBtn').forEach(elemento => {
-    elemento.addEventListener('click', function() {
-    window.location.href = "boardInicio/index.html"; // Cambia por la URL que desees
-    })
-});
-
 

@@ -11,7 +11,7 @@ body {
     width: 100%;
     min-height: 100vh;
     height: auto;
-    background-image: url('/giftSanValentin/Imagenes/landscape-with-night-starry-sky-silhouette-tree-hill-milky-way-with-lonely-tree-falling-stars.jpg'); /* Cambia esto por la URL de tu imagen */
+    background-image: url('/Imagenes/landscape-with-night-starry-sky-silhouette-tree-hill-milky-way-with-lonely-tree-falling-stars.jpg'); /* Cambia esto por la URL de tu imagen */
     background-size: cover; /* Hace que la imagen ocupe toda la pantalla */
     background-position: bottom; /* Centra la imagen de fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -54,6 +54,9 @@ body {
     text-align: center;
     z-index: 3;
     display: block;
+    opacity: 0; /* Inicia invisible */
+    animation: fadeInUp 1.5s ease-out forwards;
+    animation-delay: 0.5s; /* Pequeña pausa antes de aparecer */
 }
 .btn{
     border: 1px solid white;
@@ -63,6 +66,17 @@ body {
     border-radius: 10px;
     font-size: 24px;
 }
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 @media (max-width: 760px) {
    #text{
     position: absolute;
@@ -83,4 +97,163 @@ body {
 #garden {
     background-position: center; /* Centra la imagen de fondo */
 }
+}
+
+.butterfly {
+    animation: hover 250ms cubic-bezier(.48,.01,.54,1) infinite;
+    animation-direction: alternate;
+    animation-fill-mode: reverse;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateY(0px);
+    width: 10px;
+}
+
+.butterfly::before {
+    background: white; /* Oscuro respecto al color de fondo */
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 40px;
+    left: 50%;
+    margin-left: -10px;
+    outline: 1px solid white;
+    position: absolute;
+    top: -15px;
+    transform: rotateY(100deg);
+    width: 7px;
+    z-index: 2;
+}
+
+.wing {
+    background: white; /* Alas blancas */
+    display: block;
+    opacity: 0.7;
+    outline: 1px solid transparent;
+    position: absolute;
+    top: 0;
+}
+
+.wing:first-child {
+    animation: leftflap 250ms cubic-bezier(.48,.01,.54,1) infinite;
+    animation-direction: alternate;
+    animation-fill-mode: reverse;
+    height: 1px;
+    left: 0;
+    transform: rotateY(-20deg);
+    transform-origin: 700% 50%;
+    width: 1px;
+    z-index: 3;
+}
+
+.wing:last-child {
+    animation: rightflap 250ms cubic-bezier(.48,.01,.54,1) infinite;
+    animation-direction: alternate;
+    animation-fill-mode: reverse;
+    right: 0;
+    transform: rotateY(200deg);
+    z-index: 1;
+}
+
+.wing .bit {
+    background: white; /* Subalas blancas */
+}
+
+.wing .bit::after {
+    background: white; /* Subalas blancas */
+}
+
+.wing .bit, .wing .bit::after {
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: -5px;
+    top: -5px !important;
+    transform-origin: 100% 50%;
+}
+
+.wing .bit:first-child {
+    height: 22px;
+    text-align: center;
+    top: 15px;
+    transform: rotateZ(40deg);
+    width: 35px;
+}
+
+.wing .bit:first-child::after {
+    content: '';
+    display: inline-block;
+    height: 60px;
+    left: -30px;
+    top: 5px;
+    width: 100px;
+}
+
+.wing .bit:last-child {
+    height: 19px;
+    transform: rotateZ(-40deg);
+    width: 36px;
+}
+
+.wing .bit:last-child::after {
+    content: '';
+    display: inline-block;
+    height: 45px;
+    left: -24px;
+    top: 5px;
+    width: 60px;
+    z-index: 1;
+}
+
+@keyframes hover {
+    0% {
+        transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(0px);
+    }
+    100% {
+        transform: rotateX(50deg) rotateY(20deg) rotateZ(-50deg) translateZ(-3px);
+    }
+}
+
+@keyframes shadow {
+    0% {
+        transform: translateX(-40px) translateY(100px) scale(1,1);
+    }
+    100% {
+        transform: translateX(-40px) translateY(100px) scale(1.1,1.1);
+    }
+}
+
+@keyframes leftflap {
+    0% {
+        transform: rotateY(-20deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+@keyframes rightflap {
+    0% {
+        transform: rotateY(200deg);
+    }
+    100% {
+        transform: rotateY(90deg);
+    }
+}
+
+.twitter {    
+    background: #4099FF; /* Twitter color */
+    border-radius: 5px;
+    bottom: 5px;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 13px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 5px;
+    text-decoration: none;
+}
+
+.twitter:hover {
+    background: lighten(#4099FF, 3%);
 }

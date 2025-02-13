@@ -1,19 +1,32 @@
 const garden = document.getElementById("garden");
 const butterflies = [];
-const butterflyImage = "Imagenes/butterfly.webp"; // Imagen de mariposa
 let butterflyCount = 0;
+let messageShown = false; // Evita que el mensaje aparezca varias veces
 
 function createButterfly(x, y) {
-    const butterfly = document.createElement("img");
-    butterfly.src = butterflyImage;
+    // Crear el contenedor de la mariposa
+    const butterfly = document.createElement("div");
     butterfly.classList.add("butterfly");
+
+    // Crear alas
+    for (let i = 0; i < 2; i++) {
+        const wing = document.createElement("div");
+        wing.classList.add("wing");
+
+        for (let j = 0; j < 2; j++) {
+            const bit = document.createElement("div");
+            bit.classList.add("bit");
+            wing.appendChild(bit);
+        }
+        butterfly.appendChild(wing);
+    }
 
     let angle = Math.random() * 360; // Dirección inicial aleatoria
     let speed = Math.random() * 30 + 20; // Velocidad entre 20 y 50 px por paso
 
     butterfly.style.left = `${x}px`;
     butterfly.style.top = `${y}px`;
-    butterfly.style.transform = `rotate(${angle + 52}deg)`; // Se ajusta con el ángulo de la imagen
+    butterfly.style.transform = `rotate(${angle}deg)`;
 
     garden.appendChild(butterfly);
     butterflies.push({ element: butterfly, x, y, angle, speed });
@@ -25,7 +38,7 @@ function moveButterflies() {
         b.x += Math.cos(radianes) * b.speed;
         b.y += Math.sin(radianes) * b.speed;
 
-        // Si la mariposa toca un borde, rebota girando correctamente
+        // Rebote en los bordes
         if (b.x < 0 || b.x > window.innerWidth) {
             b.angle = 180 - b.angle;
         }
@@ -33,45 +46,40 @@ function moveButterflies() {
             b.angle = -b.angle;
         }
 
-        // Pequeña variación en la dirección para vuelo más natural
-        b.angle += Math.random() * 20 - 10; // Variación entre -10° y 10°
+        // Variación para movimiento más natural
+        b.angle += Math.random() * 20 - 10;
 
-        // Aplicar posición y rotación
+        // Aplicar nuevas posiciones y orientar mariposas en la dirección correcta
         b.element.style.left = `${b.x}px`;
         b.element.style.top = `${b.y}px`;
-        b.element.style.transform = `rotate(${b.angle + 52}deg)`; // Ajuste de rotación
+        b.element.style.transform = `rotate(${b.angle}deg)`;
     });
 
-    setTimeout(moveButterflies, 2000); // Movimiento cada 2 segundos
+    setTimeout(moveButterflies, 2000);
 }
 
 // Evento para agregar mariposas con clic
 document.addEventListener("click", (event) => {
     createButterfly(event.clientX, event.clientY);
-    // Incrementar el contador de mariposas
     butterflyCount++;
 
-    // Si el contador llega a 5, mostrar el mensaje
-    if (butterflyCount >= 5) {
-        showMessage("Las mariposas son símbolo de transformación y libertad. Que este intento mio de jardín siempre te recuerde lo hermoso que es cambiar y crecer.");
+    if (butterflyCount >= 5 && !messageShown) {
+        showMessage("Las mariposas son símbolo de transformación y libertad. Que este intento mío de jardín siempre te recuerde lo hermoso que es cambiar y crecer.");
+        messageShown = true; // Asegura que el mensaje solo aparece una vez
     }
 });
 
 // Iniciar movimiento en bucle
 moveButterflies();
+
 function showMessage(message) {
     const messageDiv = document.createElement('div');
-    messageDiv.classList='textLow'
+    messageDiv.classList = 'textLow';
     messageDiv.textContent = message;
-
-    const buttonDiv = document.createElement('button');
-    buttonDiv.classList="btn btn-outline-light";
 
     document.body.appendChild(messageDiv);
 
-    // Mostrar el mensaje después de que se hayan creado 5 mariposas
     setTimeout(() => {
-        messageDiv.style.display = 'block'; // Mostrar mensaje
-    }, 1000); // Puedes ajustar el tiempo de retraso si lo deseas
+        messageDiv.style.display = 'block';
+    }, 1000);
 }
-

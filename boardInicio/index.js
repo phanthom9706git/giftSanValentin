@@ -9,7 +9,7 @@ document.querySelectorAll('.sadbtn').forEach(button => {
         const img = document.querySelector('.imgStich');
         const text= document.querySelector('.textChange');
         const btnHappy= document.querySelector('.happybtn');
-        img.src = '/Imagenes/stichLlorando.png'; // Cambia esto por la nueva imagen
+        img.src = 'Imagenes/stichLlorando.png'; // Cambia esto por la nueva imagen
         text.innerHTML="Mala persona, como no vas a querer ver nada! Hiciste llorar al pobre Stich.";
         btnHappy.classList="btn btn-outline-primary happybtn";
         btnHappy.style.display = 'block';     
@@ -28,7 +28,7 @@ document.querySelectorAll('.happybtn').forEach(button => {
         const img = document.querySelector('.imgStich');
         const text= document.querySelector('.textChange');
         const btnHappy= document.querySelector('.sadbtn');
-        img.src = '/Imagenes/stichHappy.png'; // Cambia esto por la nueva imagen
+        img.src = 'Imagenes/stichHappy.png'; // Cambia esto por la nueva imagen
         text.innerHTML="What do you want to see first?";
         btnHappy.classList="btn btn-outline-primary btnhide sadbtn";
     });

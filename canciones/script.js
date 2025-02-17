@@ -175,6 +175,18 @@
         fecha: "11/02/2025",
         spotifyID: "3GJ4hzg4lrGwU51Y3VARbF"
     },
+    {
+        fecha: "14/02/2025",
+        spotifyID: "0m6DFmtVCFmtAEdkO9KqUK"
+    },
+    {
+        fecha: "14/02/2025",
+        spotifyID: "4eRLK1vLJxTWL5UZMiNIfD"
+    },
+    {
+        fecha: "15/02/2025",
+        spotifyID: "5rPNVwYjVEgkq6YNPki4Zc"
+    }
  ]
  // Función para crear las tarjetas
  function createSongCard(song) {

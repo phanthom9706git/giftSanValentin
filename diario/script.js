@@ -16,6 +16,7 @@ $(document).ready(function () {
   const entradaCompletaFecha = $("#entradaCompletaFecha");
   const entradaCompletaTodas = $("#entradaCompletaTodas");
   const volverListado = $("#volverListado");
+  const $goTopBtn = $("#goTop");
   const TOKEN_SECRETO_IMAGENES = "d8a0a91e0bfe10ef5b4c8edbffd68b9e"
 
 
@@ -454,6 +455,20 @@ $(document).ready(function () {
     });
     $nuevaVista.animate({ opacity: 1 }, 400); // La nueva sube su opacidad al mismo tiempo
   }
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 0) {
+      $goTopBtn.removeClass("d-none").fadeIn();
+    } else {
+      $goTopBtn.fadeOut(function () {
+        $(this).addClass("d-none");
+      });
+    }
+  });
+
+  $goTopBtn.click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+  });
+
   populateYears();
   loadEntries();
   ocultarLoader();

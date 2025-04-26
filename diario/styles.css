@@ -40,7 +40,8 @@ body {
 
 #prevMonth,
 #nextMonth,
-#openFormModal {
+#openFormModal,
+#goTop {
   border: 1px solid #5b3b2c;
   background-color: transparent;
   border-radius: 50px;
@@ -243,35 +244,6 @@ body {
   text-align: end;
 }
 
-
-/* Responsive para pantallas pequeñas (mobile) */
-@media (max-width: 768px) {
-  .contenedor-entrada {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .foto-polaroid {
-    width: 70%;
-    max-width: 200px;
-  }
-
-  .texto-entrada,
-  .texto-entrada-right {
-    width: 90%;
-    margin-top: 10px;
-  }
-
-  .texto-entrada-right {
-    text-align: center !important;
-  }
-
-  .contenedor-entrada.der {
-    flex-direction: column-reverse;
-  }
-}
-
 .polaroid-background {
   position: absolute;
   top: 10px;
@@ -321,5 +293,58 @@ body {
 @keyframes spin {
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive para pantallas pequeñas (mobile) */
+@media (max-width: 768px) {
+  .contenedor-entrada {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .foto-polaroid {
+    width: 70%;
+    max-width: 200px;
+  }
+
+  .texto-entrada,
+  .texto-entrada-right {
+    width: 90%;
+    margin-top: 10px;
+  }
+
+  .texto-entrada-right {
+    text-align: center !important;
+  }
+
+  .contenedor-entrada.der {
+    flex-direction: column-reverse;
+  }
+
+  #monthDisplay,
+  #yearDisplay {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4rem;
+    color: #5b3b2c;
+    letter-spacing: 5px;
+    font-weight: 600;
+  }
+
+  .heart-marker {
+    font-size: 0.5rem;
+  }
+
+  #openFormModal,
+  #goTop {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 13px !important;
+    color: black !important;
+  }
+
+  .titleHead {
+    font-size: 1.4rem;
   }
 }

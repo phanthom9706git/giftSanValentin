@@ -52,11 +52,11 @@
 
     <div id="calendar" class=""></div>
     <div class="d-flex justify-content-center align-items-center gap-4 my-5" id="viewAllBlock">
-      <img src="/Imagenes/flor1.png" alt="Flor izquierda" style="height: 60px;" />
-      <button id="viewAllBtn" class="btn btn-link fs-5 fw-semibold text-muted fst-italic p-0">
+      <img src="Imagenes/flor1.png" alt="Flor izquierda" style="height: 60px;" />
+      <button id="viewAllBtn" class="btn btn-link text-muted fs-5 text-muted fst-italic p-0">
         View all entries
       </button>
-      <img src="/Imagenes/flor2.png" alt="Flor derecha" style="height: 60px;" />
+      <img src="Imagenes/flor2.png" alt="Flor derecha" style="height: 60px;" />
     </div>
   </div>
   </div>
@@ -69,7 +69,7 @@
     </div>
     <div class="d-flex justify-content-center align-items-center gap-4 my-3" id="viewAllBlock">
       <img src="Imagenes/flor2.png" alt="Flor izquierda" style="height: 60px;" />
-      <button id="backToCalendar" class="btn btn-link fs-5 fw-semibold text-muted fst-italic p-0">
+      <button id="backToCalendar" class="btn btn-link fs-5 text-muted fst-italic p-0">
         Back to calendar
       </button>
       <img src="Imagenes/flor2.png" alt="Flor derecha" style="height: 60px;" />
@@ -82,7 +82,7 @@
     <div id="entradaCompletaTodas"></div>
     <div class="d-flex justify-content-center align-items-center gap-4 my-5" id="viewAllBlock">
       <img src="Imagenes/flor1.png" alt="Flor izquierda" style="height: 60px;" />
-      <button id="volverListado" class="btn btn-link fs-5 fw-semibold text-muted fst-italic p-0">
+      <button id="volverListado" class="btn btn-link fs-5 text-muted fst-italic p-0">
         Find your way back
       </button>
       <img src="Imagenes/flor2.png" alt="Flor derecha" style="height: 60px;" />
@@ -132,7 +132,7 @@
               <label for="entryImage" class="form-label">Image (optional):</label>
               <input type="file" id="entryImage" name="entryImage" accept="image/*" class="form-control" />
             </div>
-            <button type="submit" class="btn btn-link fs-5 fw-semibold text-muted fst-italic p-0">
+            <button type="submit" class="btn btn-link text-muted fs-6 fw-semibold text-muted fst-italic p-0">
               Save
             </button>
           </form>
@@ -147,6 +147,11 @@
   <button id="openFormModal" class="position-fixed bottom-0 end-0 m-4"
     style="width: 56px; height: 56px; font-size: 24px">
     +
+  </button>
+  <!-- Botón flotante para regresar al inicio -->
+  <button id="goTop" class="position-fixed bottom-0 start-0 m-4 d-none"
+    style="width: 56px; height: 56px; font-size: 24px">
+    ↑
   </button>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

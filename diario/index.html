@@ -19,21 +19,22 @@
   </div>
   <div id="calendarSection" class="container py-4">
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <button id="prevMonth">←</button>
-      <div class="d-flex justify-content-center align-items-center gap-3">
-        <p id="monthDisplay" class="text-center flex-grow-1 m-0">ENERO</p>
-        <!-- Dropdown para año -->
-        <div class="dropdown">
-          <p class="dropdown-toggle m-0" id="yearDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"
-            style="cursor: pointer">
-            <ins id="yearDisplay">2025</ins>
-          </p>
-          <ul class="dropdown-menu" id="yearList">
-            <!-- Años se agregan dinámicamente -->
-          </ul>
-        </div>
-      </div>
-      <button id="nextMonth">→</button>
+      <button id="prevMonth">
+        < </button>
+          <div class="d-flex justify-content-center align-items-center gap-3">
+            <p id="monthDisplay" class="text-center flex-grow-1 m-0">ENERO</p>
+            <!-- Dropdown para año -->
+            <div class="dropdown">
+              <p class="dropdown-toggle m-0" id="yearDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="cursor: pointer">
+                <ins id="yearDisplay">2025</ins>
+              </p>
+              <ul class="dropdown-menu" id="yearList">
+                <!-- Años se agregan dinámicamente -->
+              </ul>
+            </div>
+          </div>
+          <button id="nextMonth"> > </button>
     </div>
 
     <div id="entrySummary" class="text-center mt-4 fs-5 text-muted fst-italic mb-3">
@@ -151,7 +152,7 @@
   <!-- Botón flotante para regresar al inicio -->
   <button id="goTop" class="position-fixed bottom-0 start-0 m-4 d-none"
     style="width: 56px; height: 56px; font-size: 24px">
-    ↑
+    >
   </button>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

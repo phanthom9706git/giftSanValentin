@@ -289,12 +289,17 @@ body {
   animation: spin 1s linear infinite;
 }
 
+#goTop {
+  transform: rotate(270deg);
+}
+
 /* Animación de rotación */
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
+
 
 /* Responsive para pantallas pequeñas (mobile) */
 @media (max-width: 768px) {
@@ -337,10 +342,12 @@ body {
   }
 
   #openFormModal,
-  #goTop {
-    width: 30px !important;
-    height: 30px !important;
-    font-size: 13px !important;
+  #goTop,
+  #nextMonth,
+  #prevMonth {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 20px !important;
     color: black !important;
   }
 

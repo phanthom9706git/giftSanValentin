@@ -470,8 +470,13 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
   });
 
-  populateYears();
-  loadEntries();
-  ocultarLoader();
+  async function cargaInicial() {
+    mostrarLoader();
+    populateYears();
+    await loadEntries();
+    ocultarLoader();
+  }
+
+  cargaInicial();
 
 });

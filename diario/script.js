@@ -36,7 +36,8 @@ $(document).ready(function () {
   function populateYears() {
     const yearList = $("#yearList").empty();
     for (let y = 2020; y <= 2030; y++) {
-      const link = $("<a>").addClass("dropdown-item").attr("href", "#").text(y).on("click", () => {
+      const link = $("<a>").addClass("dropdown-item").attr("href", "#").text(y).on("click", (event) => {
+        event.preventDefault();
         currentYear = y;
         generateCalendar(currentYear, currentMonth);
       });

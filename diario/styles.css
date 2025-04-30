@@ -318,10 +318,7 @@ body {
   .texto-entrada-right {
     width: 90%;
     margin-top: 10px;
-  }
-
-  .texto-entrada-right {
-    text-align: center !important;
+    text-align: justify !important;
   }
 
   .contenedor-entrada.der {
@@ -339,6 +336,10 @@ body {
 
   .heart-marker {
     font-size: 0.5rem;
+  }
+
+  .texto-buttons {
+    text-align: center;
   }
 
   #openFormModal,

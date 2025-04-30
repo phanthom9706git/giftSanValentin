@@ -275,16 +275,20 @@ $(document).ready(function () {
           </div>  
           <div class="texto-entrada">
             <p>${obj.texto}</p>
+            <div class="texto-buttons">
             <button data-id="${obj.id}" class="btn btn-sm btn-link p-0 deleteEntry"> Eliminar </button>
             <button data-indice="${indice}" class="btn btn-sm btn-link p-0 editEntry"> Editar </button>
+            </div>
           </div>
         </div>`;
       } else {
         html += `<div class="contenedor-entrada der">
           <div class="texto-entrada-right">
             <p>${obj.texto}</p>
+             <div class="texto-buttons">
             <button data-id="${obj.id}" class="btn btn-sm btn-link p-0 deleteEntry"> Eliminar </button>
             <button data-indice="${indice}" class="btn btn-sm btn-link p-0 editEntry"> Editar </button>
+            </div>
           </div>
           <div class="foto-polaroid rotar-derecha">
             <div class="polaroid-background"></div>

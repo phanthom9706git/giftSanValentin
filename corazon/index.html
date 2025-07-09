@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corazon jugueton</title>
+    <base href="/giftSanValentin/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="corazon/style.css" />
+</head>
+
+<body>
+    <div class="heartContainer">
+        <div class="hide text" id="text">Do you love me?</div>
+        <div id="heart" class="heart show" onclick="btnHeart()"></div>
+
+        <div id="buttons" class="hide mt-4">
+            <button id="btnYes" class="btn btn-success me-3" onclick="answerYes()">YES</button>
+            <button id="btnNo" class="btn btn-danger" onmouseover="escapeNo()" ontouchstart="escapeNo()">NO</button>
+        </div>
+
+        <div id="finalMessage" class="mt-4 fs-3 text-success hide">I knew it! 😍... I love you too 💕</div>
+        <div id="reactionMessage" class="mt-4 fs-5 text-warning hide"></div>
+    </div>
+
+    <script src="corazon/script.js"></script>
+</body>
+
+</html>

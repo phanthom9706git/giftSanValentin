@@ -1,0 +1,119 @@
+.heart {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -25px;
+    left: 0;
+}
+
+.heart::after {
+    left: 25px;
+    top: 0;
+}
+
+.heartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.heartContainer button {
+    margin-top: 30px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+
+    100% {
+        transform: rotate(-45deg) scale(1);
+    }
+}
+
+.hide {
+    opacity: 0;
+    animation: hidden 1s forwards;
+    display: none;
+}
+
+.show {
+    opacity: 1;
+}
+
+.text {
+    font-size: 3rem;
+    white-space: nowrap;
+    border-right: 3px solid #fff;
+    width: 0;
+    overflow: hidden;
+    animation: typing 2s steps(10) forwards, blink 0.75s step-end infinite;
+    text-align: center;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 15ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes hidden {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes shown {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#buttons button {
+    width: 100px;
+}
+
+#btnNo {
+    position: relative;
+    transition: top 0.2s ease, left 0.2s ease;
+}
